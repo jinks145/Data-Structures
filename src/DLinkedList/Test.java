@@ -1,11 +1,14 @@
-package nodechain;
+package DLinkedList;
 
-public class Main {
+
+
+
+public class Test {
 
     public static void main(String[] args) {
 
-    Linkedlist list = new Linkedlist();
-    list.addFirst(new Node(3));
+    DLinkedlist list = new DLinkedlist();
+        list.addFirst(new Node(3));
         list.addFirst(new Node(5));
         list.addFirst(new Node(3));
         list.addFirst(new Node(7));

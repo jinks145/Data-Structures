@@ -1,6 +1,6 @@
-package nodechain;
+package DLinkedList;
 
-public class Linkedlist {
+public class DLinkedlist {
     Node head, tail;
     public void addFirst(Node p){
         Node temp = head;
@@ -25,6 +25,7 @@ public class Linkedlist {
 
         else{
             tail.next = p;
+            p.prev = tail;
             tail = p;
         }
     }
@@ -36,13 +37,16 @@ public class Linkedlist {
             if (curr.equals(p)){
                 if(prev == null){
                     head = head.next;
+                    head.prev = null;
                     break;
                    }
                    else if(curr.next == null){
-                       tail = prev;
+                       tail = curr.prev;
+                       tail.next = null;
                 }
                 else{
                     prev.next = curr.next;
+                    curr.prev = prev.prev;
                     break;
                 }
                 }else{

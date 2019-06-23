@@ -1,9 +1,9 @@
-package nodechain;
+package DLinkedList;
 
 
-     class Node{
+     class Node {
         int n;
-        Node next;
+        Node next, prev;
 
         Node(int num){
             n = num;
